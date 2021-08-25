@@ -1,6 +1,7 @@
 import { Grid } from "@material-ui/core";
 import "./App.css";
 import PieChart from "./components/PieChart";
+import LineChart from "./components/LineChart";
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
       <Grid container justify="center">
         <Grid item>
           <PieChart />
+        </Grid>
+        <Grid item>
+          <LineChart />
         </Grid>
       </Grid>
     </div>
