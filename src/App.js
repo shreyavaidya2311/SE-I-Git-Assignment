@@ -1,5 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
+import { Grid } from "@material-ui/core";
+import "./App.css";
+import PieChart from "./components/PieChart";
 
 function App() {
   return (
@@ -18,11 +19,13 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <h1>
-        Covid19 Tracker
-      </h1>
+      <h1>Covid19 Tracker</h1>
+      <Grid container justify="center">
+        <Grid item>
+          <PieChart />
+        </Grid>
+      </Grid>
     </div>
-
   );
 }
 
