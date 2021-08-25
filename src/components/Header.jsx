@@ -17,24 +17,23 @@ export class Header extends Component {
   render() {
     return (
       <div>
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-1 static-top shadow justify-content-between">
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-1 justify-content-between">
           <a class="nav-item nav-link">
             ACTIVE CASES: {this.state.total.active}
           </a>
           <a class="nav-item nav-link">
-            {" "}
-            RECOVERED CASES:
-            {this.state.total.recovered}
+            RECOVERED CASES: {this.state.total.recovered}
           </a>
           <a class="nav-item nav-link">DEATHS: {this.state.total.deaths}</a>
           <div align="right">
             <form class="form-inline my-2 my-lg-0">
-              <Button color="danger">
+              <Button color="danger" style={{ marginRight: "1em" }}>
                 <a
                   href="https://www.who.int/health-topics/coronavirus#tab=tab_1"
                   className="link"
+                  style={{ color: "whitesmoke", textDecoration: "none" }}
                 >
-                  <i class="fas fa-virus"></i> About Covid-19{" "}
+                  <i class="fas fa-virus"></i> About Covid-19
                 </a>
               </Button>
             </form>
