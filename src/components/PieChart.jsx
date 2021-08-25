@@ -36,7 +36,7 @@ export class DoughnutChart extends Component {
   render() {
     return (
       <Col>
-        <Card style={{ height: "30em", width: "20em" }}>
+        <Card style={{ height: "20em", width: "20em", margin: "2em" }}>
           <CardBody>
             <Doughnut
               data={{

@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <h1>Covid19 Tracker</h1>
+      <h1>Covid-19 Tracker</h1>
       <Grid container justify="center">
         <Grid item>
           <PieChart />

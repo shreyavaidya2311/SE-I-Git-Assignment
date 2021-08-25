@@ -8,18 +8,17 @@ class SimpleTable extends Component {
   };
 
   componentDidMount() {
-    axios
-      .get("https://www.trackcorona.live/api/countries")
-      .then((res) => this.setState({ countries: res.data.data }));
+    axios.get("https://api.covid19api.com/summary").then((res) => {
+      this.setState({ countries: res.data.Countries });
+    });
   }
 
   render() {
-    const columns = ["Country", "Confirmed", "Recovered", "Dead"];
+    const columns = ["Country", "Confirmed", "Dead"];
     const data = this.state.countries.map((countries) => [
-      countries.location,
-      countries.confirmed,
-      countries.recovered,
-      countries.dead,
+      countries.Country,
+      countries.TotalConfirmed,
+      countries.TotalDeaths,
     ]);
     const options = {
       selectableRows: false,
@@ -28,12 +27,14 @@ class SimpleTable extends Component {
     };
 
     return (
-      <MUIDataTable
-        title={"COVID 19 Statistics"}
-        data={data}
-        columns={columns}
-        options={options}
-      />
+      <div style={{ margin: "2em" }}>
+        <MUIDataTable
+          title={"COVID 19 Statistics"}
+          data={data}
+          columns={columns}
+          options={options}
+        />
+      </div>
     );
   }
 }
