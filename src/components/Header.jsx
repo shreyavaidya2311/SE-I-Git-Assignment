@@ -27,7 +27,7 @@ export class Header extends Component {
           <a class="nav-item nav-link">DEATHS: {this.state.total.deaths}</a>
           <div align="right">
             <form class="form-inline my-2 my-lg-0">
-              <Button color="danger" style={{ marginRight: "1em" }}>
+              <Button color="primary" style={{ marginRight: "1em" }}>
                 <a
                   href="https://www.who.int/health-topics/coronavirus#tab=tab_1"
                   className="link"
