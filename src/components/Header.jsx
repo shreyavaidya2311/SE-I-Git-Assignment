@@ -33,7 +33,7 @@ export class Header extends Component {
                   className="link"
                   style={{ color: "whitesmoke", textDecoration: "none" }}
                 >
-                  <i class="fas fa-virus"></i> About Covid-19
+                  <i class="fas fa-virus"></i> More about Covid-19
                 </a>
               </Button>
             </form>
